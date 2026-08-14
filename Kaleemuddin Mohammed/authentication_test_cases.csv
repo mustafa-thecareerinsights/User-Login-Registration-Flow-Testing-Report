@@ -1,0 +1,19 @@
+Test Case ID,Module,Scenario,Test Steps,Expected Result,Actual Result,Status,Priority
+TC-AUTH-001,Registration,Verify registration page loads successfully,Open registration page,Registration page should load with all required fields,Page loaded successfully with all fields visible,Pass,High
+TC-AUTH-002,Registration,Verify registration with valid details,"Enter valid name, email, password and submit",User account should be created successfully,Account created and success message displayed,Pass,High
+TC-AUTH-003,Registration,Verify required field validation,Submit form with all fields empty,Required field error messages should be displayed,Required field messages displayed,Pass,High
+TC-AUTH-004,Registration,Verify invalid email validation,Enter invalid email format and submit,System should show invalid email error,Invalid email accepted in one scenario,Fail,High
+TC-AUTH-005,Registration,Verify weak password validation,Enter password shorter than required length,System should show weak password error,Weak password error displayed,Pass,High
+TC-AUTH-006,Registration,Verify confirm password mismatch,Enter different password and confirm password,System should show password mismatch error,Password mismatch error displayed,Pass,High
+TC-AUTH-007,Registration,Verify duplicate email registration,Register using already existing email,System should show duplicate email error,Duplicate email error displayed,Pass,High
+TC-AUTH-008,Login,Verify login with valid credentials,Enter valid email and password,User should login and land on dashboard,User logged in successfully,Pass,High
+TC-AUTH-009,Login,Verify login with wrong password,Enter valid email and incorrect password,System should show invalid credentials error,Invalid credentials error displayed,Pass,High
+TC-AUTH-010,Login,Verify login with unregistered email,Enter unregistered email and any password,System should not allow login,Login blocked with error message,Pass,High
+TC-AUTH-011,Login,Verify blank login form validation,Submit login form blank,Required field errors should appear,Required field errors appear,Pass,High
+TC-AUTH-012,Forgot Password,Verify forgot password page loads,Click forgot password link,Forgot password page should open,Page opened successfully,Pass,Medium
+TC-AUTH-013,Forgot Password,Verify reset link request with registered email,Enter registered email and submit,Reset instruction message should appear,Reset instruction message displayed,Pass,High
+TC-AUTH-014,Forgot Password,Verify reset request with invalid email,Enter invalid email format,Invalid email message should appear,Invalid email accepted before submit,Fail,Medium
+TC-AUTH-015,Reset Password,Verify reset password validation,Enter new password and confirm password,Password should update successfully,Password updated successfully,Pass,High
+TC-AUTH-016,Responsiveness,Verify mobile registration page layout,Open registration page at 375px width,Fields and buttons should not overlap,Submit button overlaps footer text,Fail,Medium
+TC-AUTH-017,Responsiveness,Verify desktop login page layout,Open login page on desktop viewport,Layout should be aligned and readable,Layout aligned correctly,Pass,Medium
+TC-AUTH-018,UI,Verify password visibility toggle,Click show/hide password icon,Password should toggle visible and hidden state,Toggle works correctly,Pass,Low
